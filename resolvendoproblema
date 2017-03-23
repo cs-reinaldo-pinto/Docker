@@ -1,0 +1,10 @@
+Resolvendo problema:
+
+[ec2-user@docker-teste ~]$ docker  ps
+Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+
+sudo groupadd docker #Verifique em /etc/group se ja existe o grupo.
+sudo gpasswd -a ${USER} docker
+sudo service docker restart
+groups
+newgrp docker
